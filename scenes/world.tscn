@@ -6,12 +6,15 @@
 
 [node name="World" type="Node2D" unique_id=1175500347]
 
-[node name="Ingredient" parent="." unique_id=132958455 instance=ExtResource("1_4wyf3")]
-position = Vector2(579, 290)
-
 [node name="Wand" parent="." unique_id=196776188 instance=ExtResource("1_rwgxs")]
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=307977497]
 position = Vector2(222.5, 482.5)
 scale = Vector2(0.5703125, 0.5234375)
 texture = ExtResource("2_4wyf3")
+
+[node name="Ingredient" parent="." unique_id=212148509 instance=ExtResource("1_4wyf3")]
+position = Vector2(494, 283)
+
+[node name="Ingredient2" parent="." unique_id=140784274 instance=ExtResource("1_4wyf3")]
+position = Vector2(793, 140)

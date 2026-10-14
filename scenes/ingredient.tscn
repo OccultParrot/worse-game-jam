@@ -1,19 +1,18 @@
 [gd_scene format=3 uid="uid://dsj04mhnv43t"]
 
-[ext_resource type="Script" uid="uid://xfftmsgkew6p" path="res://scripts/ingredient.gd" id="1_ssx0k"]
+[ext_resource type="Script" uid="uid://d2moh3381p5wy" path="res://interactive_node.gd" id="1_ssx0k"]
 [ext_resource type="Texture2D" uid="uid://c852m0jrpy7wy" path="res://icon.svg" id="2_ssx0k"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_07orm"]
-size = Vector2(128, 128)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmsli"]
+size = Vector2(64, 64)
 
-[node name="Ingredient" type="Node2D" unique_id=132958455]
+[node name="Ingredient" type="RigidBody2D" unique_id=212148509]
 script = ExtResource("1_ssx0k")
-metadata/_custom_type_script = "uid://oyabbswxfxqv"
+metadata/_custom_type_script = "uid://d2moh3381p5wy"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=379266281]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=306124131]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_ssx0k")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1843914204]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=712645930]
-shape = SubResource("RectangleShape2D_07orm")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=642627126]
+shape = SubResource("RectangleShape2D_lmsli")
