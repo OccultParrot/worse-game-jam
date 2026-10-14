@@ -1,6 +1,8 @@
 extends Node2D
 
-var smoothing_weight: float = 0.05
+@export var smoothing_weight: float = 0.05
+
+var hovered_node: Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
