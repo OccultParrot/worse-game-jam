@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://b0m2bw8s2utr7"]
+
+[ext_resource type="Texture2D" uid="uid://c852m0jrpy7wy" path="res://icon.svg" id="1_nrc3s"]
+[ext_resource type="Script" uid="uid://dcfrs3ldyvay4" path="res://scripts/wand.gd" id="1_ran2g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_07orm"]
+
+[node name="Wand" type="Node2D" unique_id=196776188]
+script = ExtResource("1_ran2g")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=984914599]
+texture = ExtResource("1_nrc3s")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=866664593]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=514049322]
+shape = SubResource("CapsuleShape2D_07orm")

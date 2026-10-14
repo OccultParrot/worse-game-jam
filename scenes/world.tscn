@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ds1mm1wb01sk8"]
+
+[ext_resource type="PackedScene" uid="uid://b0m2bw8s2utr7" path="res://scenes/wand.tscn" id="1_rwgxs"]
+[ext_resource type="Texture2D" uid="uid://c852m0jrpy7wy" path="res://icon.svg" id="2_4wyf3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07orm"]
+size = Vector2(129, 127)
+
+[node name="World" type="Node2D" unique_id=1175500347]
+
+[node name="Wand" parent="." unique_id=196776188 instance=ExtResource("1_rwgxs")]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1060149201]
+position = Vector2(446, 310)
+texture = ExtResource("2_4wyf3")
+
+[node name="Area2D" type="Area2D" parent="Icon" unique_id=1698252108]
+disable_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Icon/Area2D" unique_id=596076578]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_07orm")
