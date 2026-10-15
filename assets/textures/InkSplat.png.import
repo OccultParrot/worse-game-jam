@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bab8hvqct0lw6"
-path="res://.godot/imported/HeldPen.png-2529fc306fdc2bb814765fb77edcecf6.ctex"
+uid="uid://dcltdqd7et7t6"
+path="res://.godot/imported/InkSplat.png-9c89f97d8e4d55453ca0cb5351166b45.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/HeldPen.png"
-dest_files=["res://.godot/imported/HeldPen.png-2529fc306fdc2bb814765fb77edcecf6.ctex"]
+source_file="res://assets/textures/InkSplat.png"
+dest_files=["res://.godot/imported/InkSplat.png-9c89f97d8e4d55453ca0cb5351166b45.ctex"]
 
 [params]
 

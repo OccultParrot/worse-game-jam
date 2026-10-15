@@ -13,8 +13,8 @@ var hand_opened: Resource
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	hand_closed = load("res://assets/ClosedHand.png")
-	hand_opened = load("res://assets/OpenHand.png")
+	hand_closed = load("res://assets/textures/ClosedHand.png")
+	hand_opened = load("res://assets/textures/OpenHand.png")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
