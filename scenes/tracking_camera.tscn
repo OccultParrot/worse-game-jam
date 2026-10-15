@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://uk1syea3k2eq"]
 
-[ext_resource type="Script" uid="uid://bvyekki4ngb8i" path="res://scripts/tracking_camera.gd" id="1_62hyt"]
+[ext_resource type="Script" uid="uid://bvyekki4ngb8i" path="res://src/scripts/tracking_camera.gd" id="1_62hyt"]
 
 [node name="Tracking Camera" type="Camera2D" unique_id=1592164222]
 script = ExtResource("1_62hyt")

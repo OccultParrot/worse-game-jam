@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b0m2bw8s2utr7" path="res://scenes/wand.tscn" id="1_rwgxs"]
 [ext_resource type="Texture2D" uid="uid://c852m0jrpy7wy" path="res://icon.svg" id="2_4wyf3"]
-[ext_resource type="Script" uid="uid://d2moh3381p5wy" path="res://interactive_node.gd" id="3_71j4m"]
+[ext_resource type="Script" uid="uid://d2moh3381p5wy" path="res://src/nodes/interactive_node.gd" id="3_71j4m"]
 [ext_resource type="PackedScene" uid="uid://c5wmernedn4ch" path="res://scenes/pen.tscn" id="4_k0juu"]
 [ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="5_qfnet"]
 [ext_resource type="Texture2D" uid="uid://dcltdqd7et7t6" path="res://assets/textures/InkSplat.png" id="6_i7141"]
@@ -27,7 +27,6 @@ z_index = 10
 [node name="InteractiveNode" type="RigidBody2D" parent="." unique_id=1224511373]
 position = Vector2(743, 165)
 script = ExtResource("3_71j4m")
-metadata/_custom_type_script = "uid://d2moh3381p5wy"
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="InteractiveNode" unique_id=1252419233]
