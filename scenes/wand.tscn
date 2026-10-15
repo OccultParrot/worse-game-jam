@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b0m2bw8s2utr7"]
 
-[ext_resource type="Texture2D" uid="uid://c852m0jrpy7wy" path="res://icon.svg" id="1_nrc3s"]
 [ext_resource type="Script" uid="uid://dcfrs3ldyvay4" path="res://scripts/wand.gd" id="1_ran2g"]
+[ext_resource type="Texture2D" uid="uid://s0jn4042eqgn" path="res://assets/OpenHand.png" id="2_ran2g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwgxs"]
 size = Vector2(32, 32)
@@ -10,8 +10,8 @@ size = Vector2(32, 32)
 script = ExtResource("1_ran2g")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=984914599]
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_nrc3s")
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("2_ran2g")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=866664593]
 

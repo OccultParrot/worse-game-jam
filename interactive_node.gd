@@ -3,11 +3,12 @@ class_name InteractiveNode
 
 var is_held: bool = false
 @onready var target_position = position
-@export var linear_damp_set_point = 5
-
+@export_range(0.0, 10.0) var linear_damp_set_point = 5.0
+@export_range(0.0, 10.0) var angular_damp_set_point = 5.0
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	linear_damp = linear_damp_set_point
+	angular_damp = angular_damp_set_point
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
