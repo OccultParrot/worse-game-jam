@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5wmernedn4ch"]
 
-[ext_resource type="Script" uid="uid://dpayt6act3p24" path="res://scenes/pen.gd" id="1_spjee"]
+[ext_resource type="Script" uid="uid://dpayt6act3p24" path="res://scripts/pen.gd" id="1_spjee"]
 [ext_resource type="Texture2D" uid="uid://d3n2fhfwajb06" path="res://assets/Pen.png" id="2_xbp3v"]
 
 [node name="Pen" type="RigidBody2D" unique_id=590858242]
