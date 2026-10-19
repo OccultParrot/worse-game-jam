@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://c5heuaq4givnt"]
 
 [node name="PaperView" type="Node2D" unique_id=2074308454]
+
+[node name="Label" type="Label" parent="." unique_id=1403259735]
+offset_left = 520.0
+offset_top = 310.0
+offset_right = 622.0
+offset_bottom = 340.0
+text = "Paper Screen"

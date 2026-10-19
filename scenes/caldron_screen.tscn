@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://bt4txpdw6jc6j"]
 
 [node name="CaldronScreen" type="Node2D" unique_id=1226450053]
+
+[node name="Label" type="Label" parent="." unique_id=1048530069]
+offset_left = 520.0
+offset_top = 310.0
+offset_right = 622.0
+offset_bottom = 340.0
+text = "Cauldron Screen"
