@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c5wmernedn4ch" path="res://scenes/pen.tscn" id="4_k0juu"]
 [ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="5_qfnet"]
 [ext_resource type="Texture2D" uid="uid://dcltdqd7et7t6" path="res://assets/textures/InkSplat.png" id="6_i7141"]
+[ext_resource type="AudioStream" uid="uid://dqy1wxpo657hp" path="res://assets/sounds/hungoverINCLASS.ogg" id="7_i7141"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lmsli"]
 size = Vector2(64, 64)
@@ -38,9 +39,16 @@ shape = SubResource("RectangleShape2D_lmsli")
 
 [node name="Pen" parent="." unique_id=590858242 instance=ExtResource("4_k0juu")]
 position = Vector2(289, 159)
+is_full = true
+ink_color = Color(0.5887422, 0.15734234, 0.06724263, 1)
 
 [node name="InkSplat" type="Sprite2D" parent="." unique_id=2069813116]
 material = SubResource("ShaderMaterial_j676a")
 position = Vector2(541, 168)
 scale = Vector2(0.063, 0.063)
 texture = ExtResource("6_i7141")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1566460524]
+stream = ExtResource("7_i7141")
+volume_db = 3.649
+autoplay = true
