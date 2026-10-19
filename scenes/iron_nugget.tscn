@@ -4,8 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://b5yy6jijeavgm" path="res://assets/textures/ironnug.png" id="2_f80ko"]
 
 [node name="IronNugget" type="RigidBody2D" unique_id=1174113870]
+collision_layer = 3
+collision_mask = 3
 mass = 42.283
 script = ExtResource("1_saojg")
+color = Color(0.62898123, 0.5272598, 0.4993137, 1)
 metadata/_custom_type_script = "uid://bqmtklnav657m"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1272349316]

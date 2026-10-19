@@ -2,8 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://b0m2bw8s2utr7" path="res://scenes/wand.tscn" id="1_rwgxs"]
 [ext_resource type="Script" uid="uid://cj7ms0jsxvixh" path="res://src/scripts/world.gd" id="1_w7kh3"]
+[ext_resource type="Shader" uid="uid://bs6frddwesuqt" path="res://assets/shaders/ink_mask.gdshader" id="3_e3hyu"]
 [ext_resource type="Script" uid="uid://xf8jal7r4kgr" path="res://src/types/RecipeData.gd" id="3_q5onr"]
 [ext_resource type="Texture2D" uid="uid://ytlqkf3yfppj" path="res://assets/textures/mainscreen.png" id="3_qfnet"]
+[ext_resource type="Script" uid="uid://cjliwiftj5jy4" path="res://src/scripts/caudron_mouth.gd" id="4_7r4gi"]
+[ext_resource type="Texture2D" uid="uid://b3jfee5vrnmaj" path="res://assets/textures/mainviewmask.png" id="4_q5onr"]
 [ext_resource type="Script" uid="uid://yocpqoeucrw" path="res://src/scripts/table.gd" id="5_qfnet"]
 [ext_resource type="AudioStream" uid="uid://dqy1wxpo657hp" path="res://assets/sounds/hungoverINCLASS.ogg" id="7_i7141"]
 [ext_resource type="PackedScene" uid="uid://dix5jjjqsanh2" path="res://scenes/oak_gall.tscn" id="11_e3hyu"]
@@ -12,6 +15,11 @@
 [sub_resource type="Resource" id="Resource_gtkgi"]
 script = ExtResource("3_q5onr")
 metadata/_custom_type_script = "uid://xf8jal7r4kgr"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7r4gi"]
+shader = ExtResource("3_e3hyu")
+shader_parameter/ink_mask = ExtResource("4_q5onr")
+shader_parameter/ink_color = Color(0.32707074, 0.31821603, 0.24155024, 1)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtkgi"]
 radius = 13.986389
@@ -22,38 +30,59 @@ script = ExtResource("1_w7kh3")
 recipe = SubResource("Resource_gtkgi")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1655237624]
+material = SubResource("ShaderMaterial_7r4gi")
 position = Vector2(576.3415, 247.23734)
 scale = Vector2(0.48873505, 0.48873502)
 texture = ExtResource("3_qfnet")
 
-[node name="CaudronMouth" type="Area2D" parent="." unique_id=404268798]
-position = Vector2(888, 337)
+[node name="Areas" type="Node2D" parent="." unique_id=2136239190]
+
+[node name="Table" type="Area2D" parent="Areas" unique_id=266881525]
+script = ExtResource("5_qfnet")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/Table" unique_id=873532770]
+polygon = PackedVector2Array(1068, 648, 993, 444, 146, 449, 58, 647)
+
+[node name="CauldronCollider" type="StaticBody2D" parent="Areas" unique_id=995862602]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/CauldronCollider" unique_id=60941983]
+polygon = PackedVector2Array(793, 322, 811, 323, 809, 382, 961, 379, 961, 320, 975, 320, 975, 471, 793, 470)
+
+[node name="CaudronMouth" type="Area2D" parent="Areas" unique_id=404268798]
+position = Vector2(886, 365)
+script = ExtResource("4_7r4gi")
 metadata/_edit_group_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CaudronMouth" unique_id=1226756242]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/CaudronMouth" unique_id=1226756242]
 rotation = -1.5833126
 shape = SubResource("CapsuleShape2D_gtkgi")
 
-[node name="Table" type="Area2D" parent="." unique_id=266881525]
-script = ExtResource("5_qfnet")
+[node name="InteractiveNodes" type="Node2D" parent="." unique_id=1475638953]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Table" unique_id=873532770]
-polygon = PackedVector2Array(1068, 648, 993, 444, 146, 449, 58, 647)
-
-[node name="OakGall" parent="." unique_id=1023645598 instance=ExtResource("11_e3hyu")]
+[node name="OakGall" parent="InteractiveNodes" unique_id=1023645598 instance=ExtResource("11_e3hyu")]
 position = Vector2(303, 490)
+collision_layer = 3
+collision_mask = 3
+
+[node name="IronNugget" parent="InteractiveNodes" unique_id=1174113870 instance=ExtResource("12_q5onr")]
+position = Vector2(277, 575)
+
+[node name="CauldronWater" type="Sprite2D" parent="." unique_id=435226284]
+position = Vector2(576.341, 247.237)
+scale = Vector2(0.489, 0.489)
+texture = ExtResource("4_q5onr")
 
 [node name="Wand" parent="." unique_id=1075667076 instance=ExtResource("1_rwgxs")]
-position = Vector2(538, 350)
+position = Vector2(576, 862)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1566460524]
 stream = ExtResource("7_i7141")
 volume_db = 3.649
 autoplay = true
 
-[node name="IronNugget" parent="." unique_id=1174113870 instance=ExtResource("12_q5onr")]
-position = Vector2(277, 575)
-
-[connection signal="body_entered" from="Table" to="Table" method="_on_body_entered"]
-[connection signal="body_exited" from="Table" to="Table" method="_on_body_exited"]
-[connection signal="body_exited" from="IronNugget" to="Table" method="_on_iron_nugget_body_exited"]
+[connection signal="body_entered" from="Areas/Table" to="Areas/Table" method="_on_body_entered"]
+[connection signal="body_exited" from="Areas/Table" to="Areas/Table" method="_on_body_exited"]
+[connection signal="ink_changed" from="Areas/CaudronMouth" to="." method="_on_caudron_mouth_ink_changed"]
+[connection signal="body_exited" from="InteractiveNodes/IronNugget" to="Areas/Table" method="_on_iron_nugget_body_exited"]

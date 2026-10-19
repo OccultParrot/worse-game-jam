@@ -8,6 +8,7 @@ radius = 20.0
 
 [node name="OakGall" type="RigidBody2D" unique_id=1023645598]
 script = ExtResource("1_jtyg2")
+color = Color(0.7137255, 0.2901961, 0, 1)
 metadata/_custom_type_script = "uid://bqmtklnav657m"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=661214349]
