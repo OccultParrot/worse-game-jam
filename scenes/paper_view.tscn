@@ -2,17 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://be5ppx6of6i1b" path="res://assets/textures/paperview.png" id="1_awri0"]
 [ext_resource type="Script" uid="uid://bdiqrxfm0ymwu" path="res://src/scripts/paper_view_scripts/paper_view.gd" id="1_h0j3s"]
-[ext_resource type="PackedScene" uid="uid://c5wmernedn4ch" path="res://scenes/pen.tscn" id="2_33l47"]
 
 [node name="PaperView" type="Node2D" unique_id=1604978602]
 script = ExtResource("1_h0j3s")
 metadata/_custom_type_script = "uid://dqc174vvon7xt"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1728077095]
+[node name="Background" type="Sprite2D" parent="." unique_id=1728077095]
 position = Vector2(576.00006, 324)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_awri0")
-
-[node name="Pen" parent="." unique_id=590858242 instance=ExtResource("2_33l47")]
-position = Vector2(180, 295)
-is_on_table = true

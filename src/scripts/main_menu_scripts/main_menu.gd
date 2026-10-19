@@ -23,4 +23,4 @@ func _on_options_pressed() -> void:
 
 
 func _on_exit_pressed() -> void:
-	exit_requested.emit()
+	$VBoxContainer/Exit.queue_free()
