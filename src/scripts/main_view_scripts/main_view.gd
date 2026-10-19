@@ -9,8 +9,9 @@ signal paper_view_requested
 @onready var ink_shader = load("res://assets/shaders/ink.gdshader")
 @onready var outline_shader = load("res://assets/shaders/outline.gdshader")
 
-var ink_material: ShaderMaterial
+var wand := preload("res://scenes/wand.tscn")
 
+var ink_material: ShaderMaterial
 var outline_material: ShaderMaterial
 
 @onready var water = $CauldronWater
@@ -19,14 +20,18 @@ var outline_material: ShaderMaterial
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	GameState.recipe = recipe
+	GameState.recipe_progress = RecipeData.new(Color.WHITE, 0.0)
+	
 	ink_material = ShaderMaterial.new()
 	ink_material.shader = ink_shader
 	_update_ink()
 	
 	outline_material = ShaderMaterial.new()
 	outline_material.shader = outline_shader
-
-	GameState.recipe = recipe
+	
+	var instanced_wand = wand.instantiate()
+	add_child(instanced_wand)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

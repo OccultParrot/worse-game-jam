@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c0v7dlhucsx5b"]
 
 [ext_resource type="Script" uid="uid://dlodc01o4dk5n" path="res://src/scripts/world.gd" id="1_w7kh3"]
-[ext_resource type="PackedScene" uid="uid://b0m2bw8s2utr7" path="res://scenes/wand.tscn" id="6_qfnet"]
 [ext_resource type="AudioStream" uid="uid://dqy1wxpo657hp" path="res://assets/sounds/hungoverINCLASS.ogg" id="7_i7141"]
 
 [node name="World" type="Node2D" unique_id=1077205379]
@@ -10,7 +9,3 @@ script = ExtResource("1_w7kh3")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2025907347]
 stream = ExtResource("7_i7141")
 autoplay = true
-
-[node name="Wand" parent="." unique_id=1075667076 instance=ExtResource("6_qfnet")]
-z_index = 10
-position = Vector2(576, 751)

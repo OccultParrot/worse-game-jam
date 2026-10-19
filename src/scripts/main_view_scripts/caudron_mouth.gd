@@ -4,7 +4,6 @@ signal ink_changed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	GameState.recipe_progress = RecipeData.new()
 	pass # Replace with function body.
 
 
@@ -18,6 +17,7 @@ func _process(delta):
 			continue
 		
 		GameState.recipe_progress.color *= body.color
+		print(GameState.recipe_progress.color.to_html(true))
 		
 		body.queue_free()
 		ink_changed.emit()

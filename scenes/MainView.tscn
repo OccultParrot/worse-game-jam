@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://ds1mm1wb01sk8"]
 
-[ext_resource type="Script" uid="uid://cj7ms0jsxvixh" path="res://src/scripts/main_view.gd" id="1_ib321"]
+[ext_resource type="Script" uid="uid://cj7ms0jsxvixh" path="res://src/scripts/main_view_scripts/main_view.gd" id="1_ib321"]
 [ext_resource type="Script" uid="uid://xf8jal7r4kgr" path="res://src/types/RecipeData.gd" id="2_niyxc"]
 [ext_resource type="Texture2D" uid="uid://b3jfee5vrnmaj" path="res://assets/textures/mainviewmask.png" id="4_ol1fk"]
 [ext_resource type="Texture2D" uid="uid://ytlqkf3yfppj" path="res://assets/textures/mainscreen.png" id="5_6bdrh"]
-[ext_resource type="Script" uid="uid://yocpqoeucrw" path="res://src/scripts/table.gd" id="6_xa2u5"]
-[ext_resource type="Script" uid="uid://cjliwiftj5jy4" path="res://src/scripts/caudron_mouth.gd" id="7_cjony"]
-[ext_resource type="Script" uid="uid://cfmax6rah4dr4" path="res://src/scripts/cauldron_mouse_detect.gd" id="8_niyxc"]
+[ext_resource type="Script" uid="uid://yocpqoeucrw" path="res://src/scripts/main_view_scripts/table.gd" id="6_xa2u5"]
+[ext_resource type="Script" uid="uid://cjliwiftj5jy4" path="res://src/scripts/main_view_scripts/caudron_mouth.gd" id="7_cjony"]
+[ext_resource type="Script" uid="uid://cfmax6rah4dr4" path="res://src/scripts/main_view_scripts/cauldron_mouse_detect.gd" id="8_niyxc"]
 [ext_resource type="PackedScene" uid="uid://dix5jjjqsanh2" path="res://scenes/oak_gall.tscn" id="8_rw17q"]
-[ext_resource type="Script" uid="uid://x82jseexro1j" path="res://src/scripts/paper_mouse_detect.gd" id="9_niyxc"]
+[ext_resource type="Script" uid="uid://x82jseexro1j" path="res://src/scripts/main_view_scripts/paper_mouse_detect.gd" id="9_niyxc"]
 [ext_resource type="PackedScene" uid="uid://br7gec7elvoq7" path="res://scenes/iron_nugget.tscn" id="9_q8h4x"]
 [ext_resource type="Texture2D" uid="uid://curso0vhh6060" path="res://assets/textures/paperoutline.png" id="11_ol1fk"]
 [ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="12_agdw7"]
@@ -16,6 +16,9 @@
 
 [sub_resource type="Resource" id="Resource_gtkgi"]
 script = ExtResource("2_niyxc")
+color = Color(0.44705883, 0.15294118, 0, 1)
+cook_time = 2.0
+correctness_threshold = 10.0
 metadata/_custom_type_script = "uid://xf8jal7r4kgr"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtkgi"]
