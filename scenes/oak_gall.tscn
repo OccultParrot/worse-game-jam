@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dix5jjjqsanh2"]
+
+[ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_jtyg2"]
+[ext_resource type="Texture2D" uid="uid://b8c5dix02mdxd" path="res://assets/textures/oakball.png" id="2_bsmxo"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gtkgi"]
+radius = 20.0
+
+[node name="OakGall" type="RigidBody2D" unique_id=1023645598]
+script = ExtResource("1_jtyg2")
+metadata/_custom_type_script = "uid://bqmtklnav657m"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=661214349]
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("2_bsmxo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=213246370]
+shape = SubResource("CircleShape2D_gtkgi")

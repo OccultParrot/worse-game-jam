@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://br7gec7elvoq7"]
+
+[ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_saojg"]
+[ext_resource type="Texture2D" uid="uid://b5yy6jijeavgm" path="res://assets/textures/ironnug.png" id="2_f80ko"]
+
+[node name="IronNugget" type="RigidBody2D" unique_id=1174113870]
+mass = 42.283
+script = ExtResource("1_saojg")
+metadata/_custom_type_script = "uid://bqmtklnav657m"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1272349316]
+scale = Vector2(0.08423437, 0.08325781)
+texture = ExtResource("2_f80ko")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1928812218]
+polygon = PackedVector2Array(-31, 30, -2, 35, 13, 15, 27, 9, 36, -4, 31, -17, 10, -19, -5, -5, -19, -5, -31, 8)

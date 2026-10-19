@@ -1,54 +1,59 @@
 [gd_scene format=3 uid="uid://ds1mm1wb01sk8"]
 
 [ext_resource type="PackedScene" uid="uid://b0m2bw8s2utr7" path="res://scenes/wand.tscn" id="1_rwgxs"]
-[ext_resource type="Texture2D" uid="uid://c852m0jrpy7wy" path="res://icon.svg" id="2_4wyf3"]
-[ext_resource type="Script" uid="uid://d2moh3381p5wy" path="res://src/nodes/interactive_node.gd" id="3_71j4m"]
-[ext_resource type="PackedScene" uid="uid://c5wmernedn4ch" path="res://scenes/pen.tscn" id="4_k0juu"]
-[ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="5_qfnet"]
-[ext_resource type="Texture2D" uid="uid://dcltdqd7et7t6" path="res://assets/textures/InkSplat.png" id="6_i7141"]
+[ext_resource type="Script" uid="uid://cj7ms0jsxvixh" path="res://src/scripts/world.gd" id="1_w7kh3"]
+[ext_resource type="Script" uid="uid://xf8jal7r4kgr" path="res://src/types/RecipeData.gd" id="3_q5onr"]
+[ext_resource type="Texture2D" uid="uid://ytlqkf3yfppj" path="res://assets/textures/mainscreen.png" id="3_qfnet"]
+[ext_resource type="Script" uid="uid://yocpqoeucrw" path="res://src/scripts/table.gd" id="5_qfnet"]
 [ext_resource type="AudioStream" uid="uid://dqy1wxpo657hp" path="res://assets/sounds/hungoverINCLASS.ogg" id="7_i7141"]
+[ext_resource type="PackedScene" uid="uid://dix5jjjqsanh2" path="res://scenes/oak_gall.tscn" id="11_e3hyu"]
+[ext_resource type="PackedScene" uid="uid://br7gec7elvoq7" path="res://scenes/iron_nugget.tscn" id="12_q5onr"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lmsli"]
-size = Vector2(64, 64)
+[sub_resource type="Resource" id="Resource_gtkgi"]
+script = ExtResource("3_q5onr")
+metadata/_custom_type_script = "uid://xf8jal7r4kgr"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_j676a"]
-shader = ExtResource("5_qfnet")
-shader_parameter/ink_color = Color(0.94509804, 0.23529412, 0.08627451, 0.60784316)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gtkgi"]
+radius = 13.986389
+height = 144.24475
 
 [node name="World" type="Node2D" unique_id=1175500347]
+script = ExtResource("1_w7kh3")
+recipe = SubResource("Resource_gtkgi")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=307977497]
-position = Vector2(222.5, 482.5)
-scale = Vector2(0.5703125, 0.5234375)
-texture = ExtResource("2_4wyf3")
+[node name="Background" type="Sprite2D" parent="." unique_id=1655237624]
+position = Vector2(576.3415, 247.23734)
+scale = Vector2(0.48873505, 0.48873502)
+texture = ExtResource("3_qfnet")
 
-[node name="Wand" parent="." unique_id=196776188 instance=ExtResource("1_rwgxs")]
-z_index = 10
-
-[node name="InteractiveNode" type="RigidBody2D" parent="." unique_id=1224511373]
-position = Vector2(743, 165)
-script = ExtResource("3_71j4m")
+[node name="CaudronMouth" type="Area2D" parent="." unique_id=404268798]
+position = Vector2(888, 337)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="InteractiveNode" unique_id=1252419233]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_4wyf3")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CaudronMouth" unique_id=1226756242]
+rotation = -1.5833126
+shape = SubResource("CapsuleShape2D_gtkgi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractiveNode" unique_id=1583561445]
-shape = SubResource("RectangleShape2D_lmsli")
+[node name="Table" type="Area2D" parent="." unique_id=266881525]
+script = ExtResource("5_qfnet")
 
-[node name="Pen" parent="." unique_id=590858242 instance=ExtResource("4_k0juu")]
-position = Vector2(289, 159)
-is_full = true
-ink_color = Color(0.5887422, 0.15734234, 0.06724263, 1)
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Table" unique_id=873532770]
+polygon = PackedVector2Array(1068, 648, 993, 444, 146, 449, 58, 647)
 
-[node name="InkSplat" type="Sprite2D" parent="." unique_id=2069813116]
-material = SubResource("ShaderMaterial_j676a")
-position = Vector2(541, 168)
-scale = Vector2(0.063, 0.063)
-texture = ExtResource("6_i7141")
+[node name="OakGall" parent="." unique_id=1023645598 instance=ExtResource("11_e3hyu")]
+position = Vector2(303, 490)
+
+[node name="Wand" parent="." unique_id=1075667076 instance=ExtResource("1_rwgxs")]
+position = Vector2(538, 350)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1566460524]
 stream = ExtResource("7_i7141")
 volume_db = 3.649
 autoplay = true
+
+[node name="IronNugget" parent="." unique_id=1174113870 instance=ExtResource("12_q5onr")]
+position = Vector2(277, 575)
+
+[connection signal="body_entered" from="Table" to="Table" method="_on_body_entered"]
+[connection signal="body_exited" from="Table" to="Table" method="_on_body_exited"]
+[connection signal="body_exited" from="IronNugget" to="Table" method="_on_iron_nugget_body_exited"]
