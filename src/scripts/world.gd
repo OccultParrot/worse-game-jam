@@ -1,17 +1,24 @@
 extends Node2D
 
+const MAIN_VIEW := preload("res://scenes/MainView.tscn")
+const CAULDRON_VIEW := preload("res://scenes/caldron_screen.tscn")
+const PAPER_VIEW := preload("res://scenes/paper_view.tscn")
+
+var current_view: Node2D
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	show_view(MAIN_VIEW)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-
-func show_view(view_name: String):
-	for scene in get_children():
-		if scene is not Node2D:
-			continue
-		scene = scene as Node2D
-		scene.visible = scene.name == view_name
+func show_view(view_scene: PackedScene) -> void:
+	if current_view:
+		current_view.queue_free()
+	current_view = view_scene.instantiate()
+	add_child(current_view)
+	if current_view.has_signal("cauldron_view_requested"):
+		current_view.cauldron_view_requested.connect(show_view.bind(CAULDRON_VIEW))
+	if current_view.has_signal("paper_view_requested"):
+		current_view.paper_view_requested.connect(show_view.bind(PAPER_VIEW))

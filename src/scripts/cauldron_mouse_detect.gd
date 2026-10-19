@@ -1,5 +1,6 @@
 extends Area2D
 
+signal cauldron_mouse_click
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,4 +13,4 @@ func _process(delta):
 
 func _input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == MOUSE_BUTTON_LEFT:
-		get_tree().current_scene.show_view("CaldronScreen")
+		cauldron_mouse_click.emit()

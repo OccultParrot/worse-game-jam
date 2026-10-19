@@ -10,8 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://dix5jjjqsanh2" path="res://scenes/oak_gall.tscn" id="8_rw17q"]
 [ext_resource type="Script" uid="uid://x82jseexro1j" path="res://src/scripts/paper_mouse_detect.gd" id="9_niyxc"]
 [ext_resource type="PackedScene" uid="uid://br7gec7elvoq7" path="res://scenes/iron_nugget.tscn" id="9_q8h4x"]
-[ext_resource type="PackedScene" uid="uid://b0m2bw8s2utr7" path="res://scenes/wand.tscn" id="10_jfxfn"]
+[ext_resource type="Texture2D" uid="uid://curso0vhh6060" path="res://assets/textures/paperoutline.png" id="11_ol1fk"]
 [ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="12_agdw7"]
+[ext_resource type="Texture2D" uid="uid://bm4sk4cv60svl" path="res://assets/textures/cauldron.png" id="14_6bdrh"]
 
 [sub_resource type="Resource" id="Resource_gtkgi"]
 script = ExtResource("2_niyxc")
@@ -31,14 +32,25 @@ size = Vector2(259, 132)
 shader = ExtResource("12_agdw7")
 shader_parameter/ink_color = Color(1, 1, 1, 1)
 
-[node name="MainView" type="Node2D" unique_id=1589629683]
+[node name="MainView" type="Node2D" unique_id=777614707]
 script = ExtResource("1_ib321")
 recipe = SubResource("Resource_gtkgi")
+metadata/_custom_type_script = "uid://dqc174vvon7xt"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1655237624]
 position = Vector2(576.3415, 247.23734)
 scale = Vector2(0.48873505, 0.48873502)
 texture = ExtResource("5_6bdrh")
+
+[node name="CauldronOutline" type="Sprite2D" parent="." unique_id=1031537394]
+position = Vector2(576.341, 247.237)
+scale = Vector2(0.489, 0.489)
+texture = ExtResource("14_6bdrh")
+
+[node name="PaperOutline" type="Sprite2D" parent="." unique_id=795527382]
+position = Vector2(576.341, 247.237)
+scale = Vector2(0.489, 0.489)
+texture = ExtResource("11_ol1fk")
 
 [node name="Areas" type="Node2D" parent="." unique_id=2136239190]
 
@@ -98,10 +110,13 @@ position = Vector2(576.341, 247.237)
 scale = Vector2(0.489, 0.489)
 texture = ExtResource("4_ol1fk")
 
-[node name="Wand" parent="." unique_id=1075667076 instance=ExtResource("10_jfxfn")]
-position = Vector2(576, 862)
-
 [connection signal="body_entered" from="Areas/Table" to="Areas/Table" method="_on_body_entered"]
 [connection signal="body_exited" from="Areas/Table" to="Areas/Table" method="_on_body_exited"]
 [connection signal="ink_changed" from="Areas/CaudronMouth" to="." method="_on_caudron_mouth_ink_changed"]
+[connection signal="cauldron_mouse_click" from="Areas/CauldronMouseDetect" to="." method="_on_cauldron_mouse_detect_cauldron_mouse_click"]
+[connection signal="mouse_entered" from="Areas/CauldronMouseDetect" to="." method="_on_cauldron_mouse_detect_mouse_entered"]
+[connection signal="mouse_exited" from="Areas/CauldronMouseDetect" to="." method="_on_cauldron_mouse_detect_mouse_exited"]
+[connection signal="mouse_entered" from="Areas/PaperMouseDetect" to="." method="_on_paper_mouse_detect_mouse_entered"]
+[connection signal="mouse_exited" from="Areas/PaperMouseDetect" to="." method="_on_paper_mouse_detect_mouse_exited"]
+[connection signal="paper_mouse_click" from="Areas/PaperMouseDetect" to="." method="_on_paper_mouse_detect_paper_mouse_click"]
 [connection signal="body_exited" from="InteractiveNodes/IronNugget" to="Areas/Table" method="_on_iron_nugget_body_exited"]

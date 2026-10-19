@@ -2,7 +2,7 @@ extends RigidBody2D
 class_name InteractiveNode
 
 var is_held: bool = false
-var is_on_table: bool = false
+@export var is_on_table: bool = false
 @onready var target_position = position
 @export_range(0.0, 10.0) var linear_damp_set_point = 5.0
 @export_range(0.0, 10.0) var angular_damp_set_point = 5.0
