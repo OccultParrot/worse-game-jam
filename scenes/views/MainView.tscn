@@ -7,11 +7,13 @@
 [ext_resource type="Script" uid="uid://yocpqoeucrw" path="res://src/scripts/main_view_scripts/table.gd" id="6_xa2u5"]
 [ext_resource type="Script" uid="uid://cjliwiftj5jy4" path="res://src/scripts/main_view_scripts/caudron_mouth.gd" id="7_cjony"]
 [ext_resource type="Script" uid="uid://cfmax6rah4dr4" path="res://src/scripts/main_view_scripts/cauldron_mouse_detect.gd" id="8_niyxc"]
-[ext_resource type="PackedScene" uid="uid://dix5jjjqsanh2" path="res://scenes/oak_gall.tscn" id="8_rw17q"]
+[ext_resource type="PackedScene" uid="uid://dix5jjjqsanh2" path="res://scenes/interactive_objects/ingredients/oak_gall.tscn" id="8_rw17q"]
 [ext_resource type="Script" uid="uid://x82jseexro1j" path="res://src/scripts/main_view_scripts/paper_mouse_detect.gd" id="9_niyxc"]
-[ext_resource type="PackedScene" uid="uid://br7gec7elvoq7" path="res://scenes/iron_nugget.tscn" id="9_q8h4x"]
+[ext_resource type="PackedScene" uid="uid://br7gec7elvoq7" path="res://scenes/interactive_objects/ingredients/iron_nugget.tscn" id="9_q8h4x"]
 [ext_resource type="Texture2D" uid="uid://curso0vhh6060" path="res://assets/textures/paperoutline.png" id="11_ol1fk"]
+[ext_resource type="PackedScene" uid="uid://byw1egg8v4o32" path="res://scenes/interactive_objects/ingredients/ice.tscn" id="12_6bdrh"]
 [ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="12_agdw7"]
+[ext_resource type="PackedScene" uid="uid://d1uvsx70xhi8a" path="res://scenes/interactive_objects/ingredients/flower.tscn" id="13_xa2u5"]
 [ext_resource type="Texture2D" uid="uid://bm4sk4cv60svl" path="res://assets/textures/cauldron.png" id="14_6bdrh"]
 
 [sub_resource type="Resource" id="Resource_gtkgi"]
@@ -100,12 +102,18 @@ shape = SubResource("RectangleShape2D_3plv4")
 [node name="InteractiveNodes" type="Node2D" parent="." unique_id=1475638953]
 
 [node name="OakGall" parent="InteractiveNodes" unique_id=1023645598 instance=ExtResource("8_rw17q")]
-position = Vector2(303, 490)
+position = Vector2(268, 498)
 collision_layer = 3
 collision_mask = 3
 
 [node name="IronNugget" parent="InteractiveNodes" unique_id=1174113870 instance=ExtResource("9_q8h4x")]
-position = Vector2(277, 575)
+position = Vector2(337, 485)
+
+[node name="Ice" parent="InteractiveNodes" unique_id=1055912636 instance=ExtResource("12_6bdrh")]
+position = Vector2(219, 567)
+
+[node name="Flower" parent="InteractiveNodes" unique_id=816258481 instance=ExtResource("13_xa2u5")]
+position = Vector2(293, 568)
 
 [node name="CauldronWater" type="Sprite2D" parent="." unique_id=435226284]
 material = SubResource("ShaderMaterial_71j4m")

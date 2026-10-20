@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://d1x84k7cudaro"]
 
-[ext_resource type="Script" uid="uid://bpgty82cvdmm4" path="res://src/scripts/main_menu_scripts/main_menu.gd" id="1_ekxnf"]
-[ext_resource type="FontFile" uid="uid://bfbbpq1x1prcv" path="res://assets/fonts/KaushanScript-Regular.ttf" id="1_l6cm7"]
-[ext_resource type="Script" uid="uid://bevuwy8b3ljtj" path="res://src/scripts/main_menu_scripts/play.gd" id="3_8ln24"]
-[ext_resource type="Script" uid="uid://studf7r5trn" path="res://src/scripts/main_menu_scripts/options.gd" id="4_rtw2f"]
-[ext_resource type="Script" uid="uid://cg7pc2rffydb4" path="res://src/scripts/main_menu_scripts/exit.gd" id="5_oa1go"]
+[ext_resource type="Script" uid="uid://bpgty82cvdmm4" path="res://src/scripts/main_menu_scripts/main_menu.gd" id="1_t2ti7"]
+[ext_resource type="FontFile" uid="uid://bfbbpq1x1prcv" path="res://assets/fonts/KaushanScript-Regular.ttf" id="2_8v6pb"]
+[ext_resource type="Script" uid="uid://bevuwy8b3ljtj" path="res://src/scripts/main_menu_scripts/play.gd" id="3_352rd"]
+[ext_resource type="Script" uid="uid://studf7r5trn" path="res://src/scripts/main_menu_scripts/options.gd" id="4_pr8jd"]
+[ext_resource type="Script" uid="uid://cg7pc2rffydb4" path="res://src/scripts/main_menu_scripts/exit.gd" id="5_7nvd1"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_wu84c"]
-font = ExtResource("1_l6cm7")
+font = ExtResource("2_8v6pb")
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_rwgxs"]
@@ -20,7 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ekxnf")
+script = ExtResource("1_t2ti7")
 
 [node name="Title" type="Label" parent="." unique_id=582962453]
 layout_mode = 0
@@ -54,7 +54,7 @@ metadata/_edit_group_ = true
 [node name="Play" type="Button" parent="VBoxContainer" unique_id=1843248811]
 layout_mode = 2
 size_flags_vertical = 3
-script = ExtResource("3_8ln24")
+script = ExtResource("3_352rd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Play" unique_id=1505513465]
 layout_mode = 1
@@ -74,7 +74,7 @@ justification_flags = 162
 [node name="Options" type="Button" parent="VBoxContainer" unique_id=2115633439]
 layout_mode = 2
 size_flags_vertical = 3
-script = ExtResource("4_rtw2f")
+script = ExtResource("4_pr8jd")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Options" unique_id=989130063]
 layout_mode = 1
@@ -93,7 +93,7 @@ vertical_alignment = 1
 [node name="Exit" type="Button" parent="VBoxContainer" unique_id=2106752031]
 layout_mode = 2
 size_flags_vertical = 3
-script = ExtResource("5_oa1go")
+script = ExtResource("5_7nvd1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/Exit" unique_id=752219579]
 layout_mode = 1

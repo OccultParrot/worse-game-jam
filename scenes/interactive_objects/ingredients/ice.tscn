@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://byw1egg8v4o32"]
+
+[ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_hdoyw"]
+[ext_resource type="Texture2D" uid="uid://od6kjpio6677" path="res://assets/textures/ice.png" id="2_rpp2m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3plv4"]
+size = Vector2(54, 56)
+
+[node name="Ice" type="RigidBody2D" unique_id=1055912636]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_hdoyw")
+color = Color(0.6928904, 0.98188573, 0.9999998, 1)
+object_mass = 5.0
+metadata/_custom_type_script = "uid://bqmtklnav657m"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=240568578]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_rpp2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=499279729]
+shape = SubResource("RectangleShape2D_3plv4")
