@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byw1egg8v4o32"]
 
 [ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_hdoyw"]
-[ext_resource type="Texture2D" uid="uid://od6kjpio6677" path="res://assets/textures/ice.png" id="2_rpp2m"]
+[ext_resource type="Texture2D" uid="uid://od6kjpio6677" path="res://assets/textures/interactive_objects/ingredients/ice.png" id="2_rpp2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3plv4"]
 size = Vector2(54, 56)

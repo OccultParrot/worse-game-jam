@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dix5jjjqsanh2"]
 
 [ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_jtyg2"]
-[ext_resource type="Texture2D" uid="uid://b8c5dix02mdxd" path="res://assets/textures/oakball.png" id="2_bsmxo"]
+[ext_resource type="Texture2D" uid="uid://b8c5dix02mdxd" path="res://assets/textures/interactive_objects/ingredients/oakball.png" id="2_bsmxo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_gtkgi"]
 radius = 20.0

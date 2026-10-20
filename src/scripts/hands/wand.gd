@@ -13,8 +13,8 @@ var hand_opened: Resource
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	hand_closed = load("res://assets/textures/ClosedHand.png")
-	hand_opened = load("res://assets/textures/OpenHand.png")
+	hand_closed = load("res://assets/textures/hands/ClosedHand.png")
+	hand_opened = load("res://assets/textures/hands/OpenHand.png")
 	position = get_global_mouse_position()
 
 

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d1uvsx70xhi8a"]
 
 [ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_yoh7s"]
-[ext_resource type="Texture2D" uid="uid://6rrqqevuqhe6" path="res://assets/textures/flower.png" id="2_agc10"]
+[ext_resource type="Texture2D" uid="uid://6rrqqevuqhe6" path="res://assets/textures/interactive_objects/ingredients/flower.png" id="2_agc10"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3plv4"]
-radius = 13.583077
+radius = 26.504717
 
 [node name="Flower" type="RigidBody2D" unique_id=816258481]
 collision_layer = 3
@@ -16,7 +16,7 @@ metadata/_custom_type_script = "uid://bqmtklnav657m"
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1652288141]
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_agc10")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1083630560]

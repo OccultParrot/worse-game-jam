@@ -1,6 +1,6 @@
 extends WorldView
 
-var pen := preload("res://scenes/pen_hand.tscn")
+var pen := preload("res://scenes/Hands/pen_hand.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

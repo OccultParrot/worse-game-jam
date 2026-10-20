@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bab8hvqct0lw6"
-path="res://.godot/imported/HeldPen.png-254fb921c7101844db0dec1ea69b5c5f.ctex"
+uid="uid://ch5lkwa7yox1v"
+path="res://.godot/imported/Pen.png-c3ceb9bfade7bff0542a09f64a3e8a46.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/HeldPen.png"
-dest_files=["res://.godot/imported/HeldPen.png-254fb921c7101844db0dec1ea69b5c5f.ctex"]
+source_file="res://assets/textures/interactive_objects/Pen.png"
+dest_files=["res://.godot/imported/Pen.png-c3ceb9bfade7bff0542a09f64a3e8a46.ctex"]
 
 [params]
 

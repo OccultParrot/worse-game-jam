@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s0jn4042eqgn"
-path="res://.godot/imported/OpenHand.png-990f6f91c6a67dbab2c6cd616db968d2.ctex"
+uid="uid://b3jfee5vrnmaj"
+path="res://.godot/imported/mainviewmask.png-ceba76def87ee0463e1d95768474c5a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/OpenHand.png"
-dest_files=["res://.godot/imported/OpenHand.png-990f6f91c6a67dbab2c6cd616db968d2.ctex"]
+source_file="res://assets/textures/masks/mainviewmask.png"
+dest_files=["res://.godot/imported/mainviewmask.png-ceba76def87ee0463e1d95768474c5a0.ctex"]
 
 [params]
 

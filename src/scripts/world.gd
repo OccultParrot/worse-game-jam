@@ -1,10 +1,10 @@
 extends Node2D
 
-const MAIN_MENU := preload("res://scenes/main_menu.tscn")
-const MAIN_VIEW := preload("res://scenes/MainView.tscn")
-const CAULDRON_VIEW := preload("res://scenes/caldron_screen.tscn")
-const PAPER_VIEW := preload("res://scenes/paper_view.tscn")
-const OPTIONS_MENU := preload("res://scenes/options_menu.tscn")
+const MAIN_MENU := preload("res://scenes/views/main_menu.tscn")
+const MAIN_VIEW := preload("res://scenes/views/MainView.tscn")
+const CAULDRON_VIEW := preload("res://scenes/views/caldron_screen.tscn")
+const PAPER_VIEW := preload("res://scenes/views/paper_view.tscn")
+const OPTIONS_MENU := preload("res://scenes/views/options_menu.tscn")
 
 var current_view: Node
 

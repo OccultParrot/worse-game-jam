@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://ds1mm1wb01sk8"]
 
-[ext_resource type="Script" uid="uid://cj7ms0jsxvixh" path="res://src/scripts/main_view_scripts/main_view.gd" id="1_ib321"]
-[ext_resource type="Script" uid="uid://xf8jal7r4kgr" path="res://src/types/RecipeData.gd" id="2_niyxc"]
-[ext_resource type="Texture2D" uid="uid://b3jfee5vrnmaj" path="res://assets/textures/mainviewmask.png" id="4_ol1fk"]
-[ext_resource type="Texture2D" uid="uid://ytlqkf3yfppj" path="res://assets/textures/mainscreen.png" id="5_6bdrh"]
-[ext_resource type="Script" uid="uid://yocpqoeucrw" path="res://src/scripts/main_view_scripts/table.gd" id="6_xa2u5"]
-[ext_resource type="Script" uid="uid://cjliwiftj5jy4" path="res://src/scripts/main_view_scripts/caudron_mouth.gd" id="7_cjony"]
-[ext_resource type="Script" uid="uid://cfmax6rah4dr4" path="res://src/scripts/main_view_scripts/cauldron_mouse_detect.gd" id="8_niyxc"]
-[ext_resource type="PackedScene" uid="uid://dix5jjjqsanh2" path="res://scenes/interactive_objects/ingredients/oak_gall.tscn" id="8_rw17q"]
-[ext_resource type="Script" uid="uid://x82jseexro1j" path="res://src/scripts/main_view_scripts/paper_mouse_detect.gd" id="9_niyxc"]
-[ext_resource type="PackedScene" uid="uid://br7gec7elvoq7" path="res://scenes/interactive_objects/ingredients/iron_nugget.tscn" id="9_q8h4x"]
-[ext_resource type="Texture2D" uid="uid://curso0vhh6060" path="res://assets/textures/paperoutline.png" id="11_ol1fk"]
-[ext_resource type="PackedScene" uid="uid://byw1egg8v4o32" path="res://scenes/interactive_objects/ingredients/ice.tscn" id="12_6bdrh"]
-[ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="12_agdw7"]
-[ext_resource type="PackedScene" uid="uid://d1uvsx70xhi8a" path="res://scenes/interactive_objects/ingredients/flower.tscn" id="13_xa2u5"]
-[ext_resource type="Texture2D" uid="uid://bm4sk4cv60svl" path="res://assets/textures/cauldron.png" id="14_6bdrh"]
+[ext_resource type="Script" uid="uid://cj7ms0jsxvixh" path="res://src/scripts/main_view_scripts/main_view.gd" id="1_fxr7m"]
+[ext_resource type="Script" uid="uid://xf8jal7r4kgr" path="res://src/types/RecipeData.gd" id="2_dpy0h"]
+[ext_resource type="Texture2D" uid="uid://ytlqkf3yfppj" path="res://assets/textures/backgrounds/mainscreen.png" id="3_fxr7m"]
+[ext_resource type="Texture2D" uid="uid://bm4sk4cv60svl" path="res://assets/textures/masks/cauldron.png" id="4_fxr7m"]
+[ext_resource type="Texture2D" uid="uid://curso0vhh6060" path="res://assets/textures/masks/paperoutline.png" id="5_duxbx"]
+[ext_resource type="Script" uid="uid://yocpqoeucrw" path="res://src/scripts/main_view_scripts/table.gd" id="6_f7i5h"]
+[ext_resource type="Script" uid="uid://cjliwiftj5jy4" path="res://src/scripts/main_view_scripts/caudron_mouth.gd" id="7_ygs35"]
+[ext_resource type="Script" uid="uid://cfmax6rah4dr4" path="res://src/scripts/main_view_scripts/cauldron_mouse_detect.gd" id="8_ysnic"]
+[ext_resource type="Script" uid="uid://x82jseexro1j" path="res://src/scripts/main_view_scripts/paper_mouse_detect.gd" id="9_f83v0"]
+[ext_resource type="PackedScene" uid="uid://dix5jjjqsanh2" path="res://scenes/interactive_objects/ingredients/oak_gall.tscn" id="10_2gpbr"]
+[ext_resource type="PackedScene" uid="uid://br7gec7elvoq7" path="res://scenes/interactive_objects/ingredients/iron_nugget.tscn" id="11_qr43u"]
+[ext_resource type="PackedScene" uid="uid://byw1egg8v4o32" path="res://scenes/interactive_objects/ingredients/ice.tscn" id="12_r2xqc"]
+[ext_resource type="PackedScene" uid="uid://d1uvsx70xhi8a" path="res://scenes/interactive_objects/ingredients/flower.tscn" id="13_jofgj"]
+[ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="14_s0v8l"]
+[ext_resource type="Texture2D" uid="uid://b3jfee5vrnmaj" path="res://assets/textures/masks/mainviewmask.png" id="15_fxr7m"]
 
 [sub_resource type="Resource" id="Resource_gtkgi"]
-script = ExtResource("2_niyxc")
+script = ExtResource("2_dpy0h")
 color = Color(0.44705883, 0.15294118, 0, 1)
 cook_time = 2.0
 correctness_threshold = 10.0
@@ -34,33 +34,33 @@ size = Vector2(165, 137)
 size = Vector2(259, 132)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_71j4m"]
-shader = ExtResource("12_agdw7")
+shader = ExtResource("14_s0v8l")
 shader_parameter/ink_color = Color(1, 1, 1, 1)
 
 [node name="MainView" type="Node2D" unique_id=777614707]
-script = ExtResource("1_ib321")
+script = ExtResource("1_fxr7m")
 recipe = SubResource("Resource_gtkgi")
 metadata/_custom_type_script = "uid://dqc174vvon7xt"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1655237624]
 position = Vector2(576.3415, 247.23734)
 scale = Vector2(0.48873505, 0.48873502)
-texture = ExtResource("5_6bdrh")
+texture = ExtResource("3_fxr7m")
 
 [node name="CauldronOutline" type="Sprite2D" parent="." unique_id=1031537394]
 position = Vector2(576.341, 247.237)
 scale = Vector2(0.489, 0.489)
-texture = ExtResource("14_6bdrh")
+texture = ExtResource("4_fxr7m")
 
 [node name="PaperOutline" type="Sprite2D" parent="." unique_id=795527382]
 position = Vector2(576.341, 247.237)
 scale = Vector2(0.489, 0.489)
-texture = ExtResource("11_ol1fk")
+texture = ExtResource("5_duxbx")
 
 [node name="Areas" type="Node2D" parent="." unique_id=2136239190]
 
 [node name="Table" type="Area2D" parent="Areas" unique_id=266881525]
-script = ExtResource("6_xa2u5")
+script = ExtResource("6_f7i5h")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Areas/Table" unique_id=873532770]
 polygon = PackedVector2Array(1068, 648, 993, 444, 146, 449, 58, 647)
@@ -74,7 +74,7 @@ polygon = PackedVector2Array(793, 322, 811, 323, 809, 382, 961, 379, 961, 320, 9
 
 [node name="CaudronMouth" type="Area2D" parent="Areas" unique_id=404268798]
 position = Vector2(886, 365)
-script = ExtResource("7_cjony")
+script = ExtResource("7_ygs35")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/CaudronMouth" unique_id=1226756242]
@@ -83,7 +83,7 @@ shape = SubResource("CapsuleShape2D_gtkgi")
 
 [node name="CauldronMouseDetect" type="Area2D" parent="Areas" unique_id=806483031]
 position = Vector2(888, 380)
-script = ExtResource("8_niyxc")
+script = ExtResource("8_ysnic")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/CauldronMouseDetect" unique_id=270390360]
@@ -92,7 +92,7 @@ shape = SubResource("RectangleShape2D_gtkgi")
 
 [node name="PaperMouseDetect" type="Area2D" parent="Areas" unique_id=1092766825]
 position = Vector2(524, 591)
-script = ExtResource("9_niyxc")
+script = ExtResource("9_f83v0")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Areas/PaperMouseDetect" unique_id=2064095150]
@@ -101,25 +101,25 @@ shape = SubResource("RectangleShape2D_3plv4")
 
 [node name="InteractiveNodes" type="Node2D" parent="." unique_id=1475638953]
 
-[node name="OakGall" parent="InteractiveNodes" unique_id=1023645598 instance=ExtResource("8_rw17q")]
+[node name="OakGall" parent="InteractiveNodes" unique_id=1023645598 instance=ExtResource("10_2gpbr")]
 position = Vector2(268, 498)
 collision_layer = 3
 collision_mask = 3
 
-[node name="IronNugget" parent="InteractiveNodes" unique_id=1174113870 instance=ExtResource("9_q8h4x")]
+[node name="IronNugget" parent="InteractiveNodes" unique_id=1174113870 instance=ExtResource("11_qr43u")]
 position = Vector2(337, 485)
 
-[node name="Ice" parent="InteractiveNodes" unique_id=1055912636 instance=ExtResource("12_6bdrh")]
+[node name="Ice" parent="InteractiveNodes" unique_id=1055912636 instance=ExtResource("12_r2xqc")]
 position = Vector2(219, 567)
 
-[node name="Flower" parent="InteractiveNodes" unique_id=816258481 instance=ExtResource("13_xa2u5")]
+[node name="Flower" parent="InteractiveNodes" unique_id=816258481 instance=ExtResource("13_jofgj")]
 position = Vector2(293, 568)
 
 [node name="CauldronWater" type="Sprite2D" parent="." unique_id=435226284]
 material = SubResource("ShaderMaterial_71j4m")
 position = Vector2(576.341, 247.237)
 scale = Vector2(0.489, 0.489)
-texture = ExtResource("4_ol1fk")
+texture = ExtResource("15_fxr7m")
 
 [connection signal="body_entered" from="Areas/Table" to="Areas/Table" method="_on_body_entered"]
 [connection signal="body_exited" from="Areas/Table" to="Areas/Table" method="_on_body_exited"]

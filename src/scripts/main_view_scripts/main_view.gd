@@ -9,7 +9,7 @@ signal paper_view_requested
 @onready var ink_shader = load("res://assets/shaders/ink.gdshader")
 @onready var outline_shader = load("res://assets/shaders/outline.gdshader")
 
-var wand := preload("res://scenes/wand.tscn")
+var wand := preload("res://scenes/Hands/wand.tscn")
 
 var ink_material: ShaderMaterial
 var outline_material: ShaderMaterial

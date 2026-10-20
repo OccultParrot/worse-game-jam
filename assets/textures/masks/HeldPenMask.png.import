@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://od6kjpio6677"
-path="res://.godot/imported/ice.png-22eeafb8981b2ff9aca9808d98ad4fef.ctex"
+uid="uid://dm3c72i1pnmuj"
+path="res://.godot/imported/HeldPenMask.png-5e527967cb82ffaf14d3aad2a0e7b6a9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/ice.png"
-dest_files=["res://.godot/imported/ice.png-22eeafb8981b2ff9aca9808d98ad4fef.ctex"]
+source_file="res://assets/textures/masks/HeldPenMask.png"
+dest_files=["res://.godot/imported/HeldPenMask.png-5e527967cb82ffaf14d3aad2a0e7b6a9.ctex"]
 
 [params]
 

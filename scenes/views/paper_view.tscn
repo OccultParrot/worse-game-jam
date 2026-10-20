@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://c5heuaq4givnt"]
 
-[ext_resource type="Texture2D" uid="uid://be5ppx6of6i1b" path="res://assets/textures/paperview.png" id="1_awri0"]
-[ext_resource type="Script" uid="uid://bdiqrxfm0ymwu" path="res://src/scripts/paper_view_scripts/paper_view.gd" id="1_h0j3s"]
+[ext_resource type="Script" uid="uid://bdiqrxfm0ymwu" path="res://src/scripts/paper_view_scripts/paper_view.gd" id="1_art8n"]
+[ext_resource type="Texture2D" uid="uid://be5ppx6of6i1b" path="res://assets/textures/backgrounds/paperview.png" id="2_jxgre"]
 
 [node name="PaperView" type="Node2D" unique_id=1604978602]
-script = ExtResource("1_h0j3s")
+script = ExtResource("1_art8n")
 metadata/_custom_type_script = "uid://dqc174vvon7xt"
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1728077095]
 position = Vector2(576.00006, 324)
 scale = Vector2(0.6, 0.6)
-texture = ExtResource("1_awri0")
+texture = ExtResource("2_jxgre")

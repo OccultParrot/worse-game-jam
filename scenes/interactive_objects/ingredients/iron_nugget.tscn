@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://br7gec7elvoq7"]
 
 [ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_saojg"]
-[ext_resource type="Texture2D" uid="uid://b5yy6jijeavgm" path="res://assets/textures/ironnug.png" id="2_f80ko"]
+[ext_resource type="Texture2D" uid="uid://b5yy6jijeavgm" path="res://assets/textures/interactive_objects/ingredients/ironnug.png" id="2_f80ko"]
 
 [node name="IronNugget" type="RigidBody2D" unique_id=1174113870]
 collision_layer = 3

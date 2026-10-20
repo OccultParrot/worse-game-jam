@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3jfee5vrnmaj"
-path="res://.godot/imported/mainviewmask.png-39e9972fe345de220f184e198ac77805.ctex"
+uid="uid://b8c5dix02mdxd"
+path="res://.godot/imported/oakball.png-af38f63dd8ee0e3cfbaa06915b34939b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/mainviewmask.png"
-dest_files=["res://.godot/imported/mainviewmask.png-39e9972fe345de220f184e198ac77805.ctex"]
+source_file="res://assets/textures/interactive_objects/ingredients/oakball.png"
+dest_files=["res://.godot/imported/oakball.png-af38f63dd8ee0e3cfbaa06915b34939b.ctex"]
 
 [params]
 

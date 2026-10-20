@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8c5dix02mdxd"
-path="res://.godot/imported/oakball.png-ab10f8159881626cda7ee7ee7c9a02a4.ctex"
+uid="uid://bm4sk4cv60svl"
+path="res://.godot/imported/cauldron.png-79b9a5e27690d228efb42ce088fba956.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/oakball.png"
-dest_files=["res://.godot/imported/oakball.png-ab10f8159881626cda7ee7ee7c9a02a4.ctex"]
+source_file="res://assets/textures/masks/cauldron.png"
+dest_files=["res://.godot/imported/cauldron.png-79b9a5e27690d228efb42ce088fba956.ctex"]
 
 [params]
 

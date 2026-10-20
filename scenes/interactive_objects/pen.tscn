@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c5wmernedn4ch"]
 
 [ext_resource type="Script" uid="uid://dpayt6act3p24" path="res://src/scripts/hands/pen.gd" id="1_spjee"]
-[ext_resource type="Texture2D" uid="uid://ch5lkwa7yox1v" path="res://assets/textures/Pen.png" id="2_xbp3v"]
+[ext_resource type="Texture2D" uid="uid://ch5lkwa7yox1v" path="res://assets/textures/interactive_objects/Pen.png" id="2_xbp3v"]
 
 [node name="Pen" type="RigidBody2D" unique_id=590858242]
 script = ExtResource("1_spjee")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cquuf2n0i4yg4"]
 
 [ext_resource type="Script" uid="uid://bdm1of7oeh3ep" path="res://src/scripts/paper_view_scripts/pen_hand.gd" id="1_hvdug"]
-[ext_resource type="Texture2D" uid="uid://bab8hvqct0lw6" path="res://assets/textures/HeldPen.png" id="2_gsmsa"]
+[ext_resource type="Texture2D" uid="uid://bab8hvqct0lw6" path="res://assets/textures/hands/HeldPen.png" id="2_gsmsa"]
 
 [node name="PenHand" type="Node2D" unique_id=1089739792]
 script = ExtResource("1_hvdug")

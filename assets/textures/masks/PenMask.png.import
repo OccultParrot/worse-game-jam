@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm3c72i1pnmuj"
-path="res://.godot/imported/HeldPenMask.png-aba827c761d3d23a976f07f43d2824cf.ctex"
+uid="uid://dowkudmg4go37"
+path="res://.godot/imported/PenMask.png-9df7bfbac99a344282f0dccddc2d52d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/HeldPenMask.png"
-dest_files=["res://.godot/imported/HeldPenMask.png-aba827c761d3d23a976f07f43d2824cf.ctex"]
+source_file="res://assets/textures/masks/PenMask.png"
+dest_files=["res://.godot/imported/PenMask.png-9df7bfbac99a344282f0dccddc2d52d6.ctex"]
 
 [params]
 

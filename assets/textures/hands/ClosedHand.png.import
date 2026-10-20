@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be5ppx6of6i1b"
-path="res://.godot/imported/paperview.png-924a66260b90d47617960380f0985dc0.ctex"
+uid="uid://i4kusn0opvyc"
+path="res://.godot/imported/ClosedHand.png-5b0d1df46c5dce6d8cb0330bd45145dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/paperview.png"
-dest_files=["res://.godot/imported/paperview.png-924a66260b90d47617960380f0985dc0.ctex"]
+source_file="res://assets/textures/hands/ClosedHand.png"
+dest_files=["res://.godot/imported/ClosedHand.png-5b0d1df46c5dce6d8cb0330bd45145dc.ctex"]
 
 [params]
 

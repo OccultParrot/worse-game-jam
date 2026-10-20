@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm4sk4cv60svl"
-path="res://.godot/imported/cauldron.png-d0f714c4f333ebfb32a3bf22cfae50d0.ctex"
+uid="uid://dcltdqd7et7t6"
+path="res://.godot/imported/InkSplat.png-2864e96ba08496ad00a566a1e3fd59f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/cauldron.png"
-dest_files=["res://.godot/imported/cauldron.png-d0f714c4f333ebfb32a3bf22cfae50d0.ctex"]
+source_file="res://assets/textures/decals/InkSplat.png"
+dest_files=["res://.godot/imported/InkSplat.png-2864e96ba08496ad00a566a1e3fd59f5.ctex"]
 
 [params]
 
