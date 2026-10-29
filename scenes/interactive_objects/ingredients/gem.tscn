@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dpcet3hxaw1oy"]
+
+[ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_yurmh"]
+[ext_resource type="Texture2D" uid="uid://chgdigiyj20uo" path="res://assets/textures/interactive_objects/ingredients/gem.png" id="2_vvb5y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07orm"]
+size = Vector2(67.56978, 48.402634)
+
+[node name="Gem" type="RigidBody2D" unique_id=1644318888]
+script = ExtResource("1_yurmh")
+ingredient_id = 5
+color = Color(0.6175562, 0.4843952, 1, 1)
+metadata/_custom_type_script = "uid://bqmtklnav657m"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1616754513]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_vvb5y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=851482290]
+position = Vector2(2.549028, 3.593157)
+rotation = 1.034693
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_07orm")

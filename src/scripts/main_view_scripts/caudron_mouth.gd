@@ -15,9 +15,7 @@ func _process(delta):
 		body = body as IngredientNode
 		if body.is_held:
 			continue
-		
-		GameState.recipe_progress.color *= body.color
-		print(GameState.recipe_progress.color.to_html(true))
+		GameState.ingredients_in_pot.append(body.ingredient_id)
+		print(GameState.ingredients_in_pot)
 		
 		body.queue_free()
-		ink_changed.emit()

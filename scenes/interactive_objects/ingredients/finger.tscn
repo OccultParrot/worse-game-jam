@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://b733mdpb0w56p"]
+
+[ext_resource type="Script" uid="uid://bqmtklnav657m" path="res://src/nodes/ingredient_node.gd" id="1_w12cm"]
+[ext_resource type="Texture2D" uid="uid://xiom5bacil35" path="res://assets/textures/interactive_objects/ingredients/finger.png" id="2_su4sh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_07orm"]
+size = Vector2(111, 25.493181)
+
+[node name="Finger" type="RigidBody2D" unique_id=1204190379]
+script = ExtResource("1_w12cm")
+ingredient_id = 4
+color = Color(0.36694992, 0.396653, 0.16141525, 1)
+metadata/_custom_type_script = "uid://bqmtklnav657m"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=287230808]
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("2_su4sh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=487456255]
+position = Vector2(0.99111336, -2.3917239)
+rotation = -0.20964351
+shape = SubResource("RectangleShape2D_07orm")

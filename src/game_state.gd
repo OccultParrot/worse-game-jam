@@ -2,6 +2,7 @@ extends Node
 
 @export var recipe: RecipeData
 @export var recipe_progress: RecipeData
+@export var ingredients_in_pot: Array[GlobalEnums.IngredientIDs]
 
 func score_recipe() -> bool:
 	var score = 0

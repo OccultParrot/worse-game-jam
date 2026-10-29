@@ -10,6 +10,7 @@ size = Vector2(54, 56)
 collision_layer = 3
 collision_mask = 3
 script = ExtResource("1_hdoyw")
+ingredient_id = 3
 color = Color(0.6928904, 0.98188573, 0.9999998, 1)
 object_mass = 5.0
 metadata/_custom_type_script = "uid://bqmtklnav657m"

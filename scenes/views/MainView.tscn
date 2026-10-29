@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://d1uvsx70xhi8a" path="res://scenes/interactive_objects/ingredients/flower.tscn" id="13_jofgj"]
 [ext_resource type="Shader" uid="uid://dns5fwoavk2m6" path="res://assets/shaders/ink.gdshader" id="14_s0v8l"]
 [ext_resource type="Texture2D" uid="uid://b3jfee5vrnmaj" path="res://assets/textures/masks/mainviewmask.png" id="15_fxr7m"]
+[ext_resource type="PackedScene" uid="uid://b733mdpb0w56p" path="res://scenes/interactive_objects/ingredients/finger.tscn" id="16_5ksaq"]
+[ext_resource type="PackedScene" uid="uid://dpcet3hxaw1oy" path="res://scenes/interactive_objects/ingredients/gem.tscn" id="17_ijpyy"]
 
 [sub_resource type="Resource" id="Resource_gtkgi"]
 script = ExtResource("2_dpy0h")
@@ -100,6 +102,16 @@ position = Vector2(2.5, -7)
 shape = SubResource("RectangleShape2D_3plv4")
 
 [node name="InteractiveNodes" type="Node2D" parent="." unique_id=1475638953]
+
+[node name="Gem" parent="InteractiveNodes" unique_id=1644318888 instance=ExtResource("17_ijpyy")]
+position = Vector2(709, 481)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Finger" parent="InteractiveNodes" unique_id=1204190379 instance=ExtResource("16_5ksaq")]
+position = Vector2(774, 557)
+collision_layer = 3
+collision_mask = 3
 
 [node name="OakGall" parent="InteractiveNodes" unique_id=1023645598 instance=ExtResource("10_2gpbr")]
 position = Vector2(268, 498)

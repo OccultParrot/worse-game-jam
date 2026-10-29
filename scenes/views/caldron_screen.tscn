@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bt4txpdw6jc6j"]
 
-[ext_resource type="Script" uid="uid://dqc174vvon7xt" path="res://src/nodes/view_node.gd" id="1_m68cc"]
+[ext_resource type="Script" uid="uid://brw0toloqdp58" path="res://src/scripts/cauldron_view_scripts/caldron_screen.gd" id="1_h1fwe"]
 
 [node name="CaldronScreen" type="Node2D" unique_id=1157068852]
-script = ExtResource("1_m68cc")
+script = ExtResource("1_h1fwe")
 metadata/_custom_type_script = "uid://dqc174vvon7xt"
